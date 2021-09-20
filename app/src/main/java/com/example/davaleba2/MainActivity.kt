@@ -15,15 +15,17 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val button = findViewById<Button>(R.id.button)
+        val button = findViewById<Button>(R.id.button) //თუ დრე დამრჩება -> lateinit
         val eText = findViewById<EditText>(R.id.eText)
         val tView = findViewById<TextView>(R.id.tView)
         var str = ""
 
         button.setOnClickListener(View.OnClickListener {
-            str = eText.text.toString().reversed()
-            tView.text = str
+            str = eText.text.toString()
+            tView.text = numberConverter(str.toInt())
         })
+
+
 
     }
 }
