@@ -1,6 +1,6 @@
 package com.example.davaleba2
 
-fun kavshiri(str: String): String {
+fun kavshiri(str: String): String { //20..99 ციფრებს აკავშირებს ერთმანეთს
     return str.dropLast(1) + "და"
 }
 
@@ -51,7 +51,7 @@ fun toGeorgianUntil99(num: Int): String {
         num / 10 == 9 -> kavshiri(otxmoci) + list[num % 10 + 10]
 
 
-        else -> "null"
+        else -> "0"
     }
 }
 
@@ -63,7 +63,7 @@ fun toGeorgianFrom100Until999(num: Int): String {
         num / 100 in 8..9 -> list[num / 100] + asi.dropLast(1) + toGeorgianUntil99(num % 100)
 
 
-        else -> "null"
+        else -> "0"
     }
 }
 
@@ -71,14 +71,15 @@ fun toGeorgianFrom100Until999(num: Int): String {
 fun numberConverter(num: Int): String {
 
 
-    return when {
-        num == 100 -> asi
-        num == 800 -> list[num / 100] + asi
-        num == 900 -> list[num / 100] + asi
-        num / 100 * 100 == num -> list[num / 100].dropLast(1) + asi
-        num in 1..99 -> toGeorgianUntil99(num)
-        num in 100..999 -> toGeorgianFrom100Until999(num)
-        else -> "you shall not pass"
+    return when (num) {
+        100 -> asi
+        800 -> list[num / 100] + asi
+        900 -> list[num / 100] + asi
+        num / 100 * 100 -> list[num / 100].dropLast(1) + asi //ამოწმებს ასეულებს
+
+        in 1..99 -> toGeorgianUntil99(num)
+        in 100..999 -> toGeorgianFrom100Until999(num)
+        else -> "wrong number"
     }
 
 }
