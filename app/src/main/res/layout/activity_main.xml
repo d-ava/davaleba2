@@ -9,7 +9,7 @@
 
     <EditText
         android:hint="enter number from 1 .. 1000"
-        android:text="289"
+
         android:id="@+id/eText"
         android:layout_width="match_parent"
 
@@ -30,7 +30,9 @@
         android:layout_marginTop="50dp"
         android:id="@+id/tView"
         android:textSize="25sp"
-        android:hint="ცხრაასოთხმოცდაცხრამეტი"
+        android:hint="აქ გამოჩნდება ტექსტი"
+
+
 
 
         android:layout_width="match_parent"
