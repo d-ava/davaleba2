@@ -82,6 +82,7 @@ fun numberConverter(num: Int): String {
 
         in 1..99 -> toGeorgianUntil99(num)
         in 100..999 -> toGeorgianFrom100Until999(num)
+        1000 -> list[10].dropLast(1)+ asi
         else -> "wrong number"
     }
 
