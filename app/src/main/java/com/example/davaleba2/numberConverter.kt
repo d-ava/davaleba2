@@ -40,13 +40,16 @@ fun toGeorgianUntil99(num: Int): String {
 
 
     return when {
-        num / 10 == 0 -> list[num]
+        num in 0..20 -> list[num]
         num / 10 == 2 -> kavshiri(list[20]) + list[num % 10]
         num / 10 == 3 -> kavshiri(list[20]) + list[num % 10 + 10]
+        num == 40 -> ormoci
         num / 10 == 4 -> kavshiri(ormoci) + list[num % 10]
         num / 10 == 5 -> kavshiri(ormoci) + list[num % 10 + 10]
+        num == 60 -> samoci
         num / 10 == 6 -> kavshiri(samoci) + list[num % 10]
         num / 10 == 7 -> kavshiri(samoci) + list[num % 10 + 10]
+        num == 80 -> otxmoci
         num / 10 == 8 -> kavshiri(otxmoci) + list[num % 10]
         num / 10 == 9 -> kavshiri(otxmoci) + list[num % 10 + 10]
 
