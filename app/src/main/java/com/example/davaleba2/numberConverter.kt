@@ -74,6 +74,8 @@ fun toGeorgianFrom100Until999(num: Int): String {
 fun numberConverter(num: Int): String {
 
 
+
+
     return when (num) {
         100 -> asi
         800 -> list[num / 100] + asi
